@@ -136,6 +136,16 @@ section.block{padding-block:56px}
 .crisis p{margin:0}
 .num{font-variant-numeric:tabular-nums;font-weight:700;user-select:all}
 
+.dc{border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:10px;padding:20px 22px;display:grid;gap:8px;background:var(--gold-soft)}
+.dc blockquote{margin:0;font-family:var(--display);font-size:18px;line-height:1.5;color:var(--navy)}
+.dc .ref{color:var(--gold-dk);font-weight:700;font-size:14px}
+.dc .note{margin:0;font-size:12.5px;color:var(--muted)}
+.trad{display:flex;gap:14px;align-items:flex-start;padding:18px 20px;border-radius:10px;background:var(--page);border:1px solid var(--line)}
+.trad .ic{width:40px;height:40px;border-radius:50%;background:var(--navy);display:grid;place-items:center;flex:none}
+.trad .ic svg{width:20px;height:20px;color:var(--gold)}
+.trad h3{font-size:17px;color:var(--navy);margin-bottom:4px}
+.trad p{margin:0;color:#3A4257;max-width:80ch}
+
 /* gold band */
 .band{background:var(--gold);color:var(--navy)}
 .band .in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;padding-block:26px}
@@ -148,6 +158,16 @@ section.block{padding-block:56px}
 .band .acts .num{font-size:14px}
 .band .ghost{border-color:var(--navy);color:var(--navy)}
 .band .ghost:hover{background:var(--navy);color:var(--gold)}
+
+/* care section */
+.care{background:var(--white);border-top:1px solid var(--line)}
+.care .in{display:flex;flex-wrap:wrap;align-items:center;gap:20px 28px;padding-block:44px}
+.care-ic{width:64px;height:64px;border-radius:50%;background:var(--gold-soft);display:grid;place-items:center;flex:none}
+.care-ic svg{width:30px;height:30px;color:var(--gold-dk)}
+.care-txt{flex:1 1 420px;min-width:0;display:grid;gap:8px}
+.care-txt h2{font-size:clamp(20px,2.8vw,26px);color:var(--navy)}
+.care-txt p{margin:0;color:#3A4257;max-width:66ch}
+.care-txt .small{font-size:13px;color:var(--muted)}
 
 /* footer */
 footer.site{background:var(--navy);color:#C4CCDD;font-size:13px}
@@ -176,7 +196,7 @@ footer.site p{margin:10px 0 0}
 </svg>
 
 <div class="topbar"><div class="in">
-  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5V5a2 2 0 0 1 2-2h14v16H6a2 2 0 0 0-2 2Z"/></svg>Orientación desde la Biblia, gratis para todos</span>
+  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5V5a2 2 0 0 1 2-2h14v16H6a2 2 0 0 0-2 2Z"/></svg>La Biblia que compartimos todos los cristianos, gratis para todos</span>
   <a class="topwa" href="https://wa.me/56988236617" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Escríbenos por WhatsApp</a>
 </div></div>
 
@@ -194,7 +214,7 @@ footer.site p{margin:10px 0 0}
   <div class="in"><div class="hero-copy">
     <p class="eyebrow">Bienvenido</p>
     <h1>Busca a Dios.<br>Escucha su Palabra.<br><em>Da el siguiente paso.</em></h1>
-    <p class="lead">Cuéntanos qué estás viviendo y recibe un pasaje bíblico, una reflexión, un paso concreto para hoy y una oración.</p>
+    <p class="lead">Cuéntanos qué estás viviendo y recibe pasajes de la Biblia que comparten católicos, ortodoxos y evangélicos, una reflexión, un paso concreto para hoy y una oración.</p>
     <div class="ctas">
       <a class="btn btn-navy" href="#consejo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Buscar mi consejo</a>
       <a class="btn btn-line" href="#resultado" id="hoyBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v2M5.6 5.6l1.4 1.4M3 12h2M19 12h2M17 7l1.4-1.4"/><path d="M7 16a5 5 0 0 1 10 0"/><path d="M3 20h18"/></svg>Palabra para hoy</a>
@@ -232,21 +252,32 @@ footer.site p{margin:10px 0 0}
     <div><h2>Esta app es gratuita y siempre lo será</h2><p>Si te ha sido de bendición y quieres apoyar para que siga disponible, tu donación es bienvenida.</p></div>
   </div>
   <div class="acts">
-    <a class="btn btn-navy" href="https://wa.me/56988236617?text=Hola%2C%20quiero%20hacer%20una%20donaci%C3%B3n%20para%20la%20app%20Consejo%20de%20Dios" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Donar por WhatsApp</a>
+    <a class="btn btn-navy" href="https://wa.me/56988236617?text=Hola%2C%20quiero%20hacer%20una%20donaci%C3%B3n%20para%20la%20app%20Consejo%20de%20Dios" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>WhatsApp</a>
   </div>
+</div></section>
+
+<section class="care" id="acompanamiento"><div class="in">
+  <div class="care-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-8-4.6-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6.4-8 11-8 11Z"/><path d="M8.5 11.5h2l1-2 1.5 4 1-2h1.5"/></svg></div>
+  <div class="care-txt">
+    <p class="eyebrow">Acompañamiento emocional</p>
+    <h2>A veces la fe también necesita compañía</h2>
+    <p>Si lo que estás viviendo te pesa demasiado o se ha quedado contigo por mucho tiempo, no tienes que cargarlo solo/a. Conversar con una profesional en terapia emocional puede ayudarte a ordenar lo que sientes y a sanar a tu ritmo.</p>
+    <p class="small">Si tus síntomas son intensos o no mejoran, consulta también con un psicólogo o un médico.</p>
+  </div>
+  <a class="btn btn-navy" href="https://inphidass.cl" target="_blank" rel="noopener">Conocer Inphidass</a>
 </div></section>
 
 <footer class="site">
   <div class="in">
     <div>
       <a class="logo" href="#inicio"><svg><use href="#cross"/></svg><span><b>CONSEJO DE DIOS</b><small>Su Palabra para tu día</small></span></a>
-      <p>Orientación espiritual basada en la Biblia, gratuita para todos.</p>
+      <p>Orientación espiritual basada en la Biblia, para cristianos de todas las tradiciones.</p>
     </div>
-    <div><h4>Navegar</h4><ul><li><a href="#inicio">Inicio</a></li><li><a href="#consejo">Buscar consejo</a></li><li><a href="#donar">Apoyar la app</a></li></ul></div>
+    <div><h4>Navegar</h4><ul><li><a href="#inicio">Inicio</a></li><li><a href="#consejo">Buscar consejo</a></li><li><a href="#donar">Apoyar la app</a></li><li><a href="#acompanamiento">Acompañamiento emocional</a></li></ul></div>
     <div><h4>Situaciones</h4><ul id="footStates"></ul></div>
     <div><h4>Contacto</h4><ul><li><a href="https://wa.me/56988236617" target="_blank" rel="noopener">Escríbenos por WhatsApp</a></li><li>Ayuda en crisis (Chile): <span class="num">*4141</span></li></ul></div>
   </div>
-  <div class="legal"><div class="in">Pasajes de la Reina-Valera 1909 (dominio público), con ortografía actualizada. Esta app ofrece orientación espiritual y no reemplaza el acompañamiento pastoral ni la atención médica o psicológica.</div></div>
+  <div class="legal"><div class="in">Pasajes principales: libros aceptados por todas las iglesias cristianas, de la Reina-Valera 1909 (dominio público) con ortografía actualizada y «el Señor» como nombre divino. Libros deuterocanónicos: traducción basada en la versión de Torres Amat (dominio público). Esta app ofrece orientación espiritual y no reemplaza el acompañamiento pastoral ni la atención médica o psicológica.</div></div>
 </footer>
 <div class="toast" id="toast" hidden></div>
 
@@ -268,7 +299,7 @@ const ICON={
   desesperanza:'<path d="M12 21V9"/><path d="M8 13l4-4 4 4"/><path d="M5 4h14"/>'
 };
 const DESC={ansiedad:"Cuando la mente no descansa",tristeza:"Pérdidas, pena y duelo",soledad:"Cuando sientes que nadie está",miedo:"Para avanzar con valor",culpa:"Perdón y un nuevo comienzo",enojo:"Para no actuar en caliente",cansancio:"Cuando ya no das más",decision:"Sabiduría para elegir",enfermedad:"Fuerza en la fragilidad",dinero:"Deudas, trabajo y provisión",familia:"Paz en tu hogar",dudas:"Cuando cuesta creer",gratitud:"Agradecer lo bueno",desesperanza:"Ayuda y esperanza ahora"};
-const PIC={ref:'<path d="M2 5c3-1.5 7-1.5 10 .5 3-2 7-2 10-.5v14c-3-1.5-7-1.5-10 .5-3-2-7-2-10-.5Z"/>',step:'<path d="M5 12h12M13 6l6 6-6 6"/>',pray:'<path d="M9 21V11l3-8 3 8v10"/><path d="M9 14H5l-2 7h18l-2-7h-4"/>'};
+const PIC={church:'<path d="M12 2v4M10 4h4"/><path d="M6 21V11l6-5 6 5v10"/><path d="M10 21v-5h4v5"/><path d="M3 21h18"/>',ref:'<path d="M2 5c3-1.5 7-1.5 10 .5 3-2 7-2 10-.5v14c-3-1.5-7-1.5-10 .5-3-2-7-2-10-.5Z"/>',step:'<path d="M5 12h12M13 6l6 6-6 6"/>',pray:'<path d="M9 21V11l3-8 3 8v10"/><path d="M9 14H5l-2 7h18l-2-7h-4"/>'};
 const svg=(p,sw=1.6)=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
 
 const DATA = {
@@ -276,98 +307,115 @@ const DATA = {
     v:[["Por nada estéis afanosos; sino sean notorias vuestras peticiones delante de Dios en toda oración y ruego, con hacimiento de gracias. Y la paz de Dios, que sobrepuja todo entendimiento, guardará vuestros corazones y vuestros entendimientos en Cristo Jesús.","Filipenses 4:6-7"],
        ["Echando toda vuestra solicitud en él, porque él tiene cuidado de vosotros.","1 Pedro 5:7"],
        ["Así que, no os congojéis por el día de mañana; que el día de mañana traerá su fatiga: basta al día su afán.","Mateo 6:34"]],
-    r:"La ansiedad vive en el futuro: en lo que podría pasar. Dios te invita a traer cada preocupación concreta a Él, una por una, y a vivir solo el día de hoy. No te pide que dejes de sentir; te pide que no cargues solo/a.",
+    dc:["Confía en Dios, y él te ayudará; endereza tus caminos y espera en él.","Eclesiástico (Sirácida) 2:6"],
+    r:"Cuando la cabeza no para, casi siempre está viviendo en un mañana que todavía no llega. Es muy humano. Dios no te pide que dejes de sentir esa inquietud de un día para otro; te invita a contarle cada preocupación, una por una, como se las contarías a alguien que te quiere. No tienes que cargar con todo hoy. Hoy basta con hoy.",
     p:"Escribe en un papel las tres cosas que más te preocupan. Ora por cada una nombrándola, y al terminar marca cuál de ellas puedes atender hoy. Las demás, déjalas en manos de Dios hasta mañana.",
     o:"Señor, tú conoces lo que me inquieta. Hoy pongo en tus manos lo que no puedo controlar. Dame tu paz, esa que no depende de que todo esté resuelto. Amén."},
   tristeza:{n:"Tristeza o duelo",k:["triste","pena","llor","duelo","murió","murio","falleci","perdí","perdi","extraño"],
-    v:[["Cercano está Jehová a los quebrantados de corazón; y salvará a los contritos de espíritu.","Salmos 34:18"],
+    v:[["Cercano está el Señor a los quebrantados de corazón; y salvará a los contritos de espíritu.","Salmos 34:18"],
        ["Bienaventurados los que lloran: porque ellos recibirán consolación.","Mateo 5:4"],
        ["Y limpiará Dios toda lágrima de los ojos de ellos; y la muerte no será más; y no habrá más llanto, ni clamor, ni dolor: porque las primeras cosas son pasadas.","Apocalipsis 21:4"]],
-    r:"Jesús lloró ante la tumba de su amigo. La tristeza no es falta de fe. Dios no se aleja de tu dolor: según el salmo, está más cerca de los que tienen el corazón roto.",
+    dc:["Las almas de los justos están en las manos de Dios, y no los alcanzará tormento alguno. A los ojos de los insensatos parecieron morir, pero ellos están en paz.","Sabiduría 3:1-3"],
+    t:'Católicos y ortodoxos suelen ofrecer misas, liturgias y oraciones por sus difuntos. Las iglesias evangélicas acompañan con cultos de consuelo y la esperanza en la resurrección (1 Tesalonicenses 4:13-14). Todas comparten esa esperanza.',
+    r:"Si te duele, es porque amaste o esperabas algo con todo el corazón. Llorar no es falta de fe: Jesús también lloró por su amigo Lázaro. Puede que ahora Dios se sienta lejos, pero la Biblia dice justo lo contrario: está más cerca de quienes tienen el corazón roto. Date tiempo. El duelo no se apura.",
     p:"Date permiso de llorar sin culparte. Hoy busca a una persona de confianza y cuéntale cómo te sientes, aunque sea en un mensaje corto.",
     o:"Padre, me duele. No tengo palabras, pero tú entiendes mis lágrimas. Acompáñame en este tiempo y consuélame como solo tú sabes hacerlo. Amén."},
   soledad:{n:"Soledad",k:["solo","sola","soledad","nadie","abandon","aislad"],
     v:[["No temas, que yo soy contigo; no desmayes, que yo soy tu Dios que te esfuerzo: siempre te ayudaré, siempre te sustentaré con la diestra de mi justicia.","Isaías 41:10"],
        ["No te desampararé, ni te dejaré.","Hebreos 13:5"],
-       ["Aunque mi padre y mi madre me dejaran, Jehová con todo me recogerá.","Salmos 27:10"]],
-    r:"Sentirse solo/a no significa estar olvidado/a. Dios promete su presencia constante, y también suele responder a la soledad a través de personas: la iglesia, un vecino, un amigo de antes.",
+       ["Aunque mi padre y mi madre me dejaran, el Señor con todo me recogerá.","Salmos 27:10"]],
+    dc:["El amigo fiel es protección segura; el que lo encuentra, ha encontrado un tesoro.","Eclesiástico (Sirácida) 6:14"],
+    r:"Sentirse solo/a duele de una manera muy particular, como si el mundo siguiera girando sin ti. Pero estar solo/a no significa estar olvidado/a. Dios está contigo incluso en las noches más silenciosas, y muchas veces responde a la soledad a través de personas: alguien de tu comunidad, un vecino, ese amigo al que hace tiempo no le escribes.",
     p:"Escríbele hoy a alguien con quien hayas perdido contacto. Si tienes una comunidad de fe, busca una actividad a la que puedas asistir esta semana.",
     o:"Señor, me siento solo/a. Recuérdame que tú estás aquí, y abre mis ojos a las personas que has puesto cerca de mí. Amén."},
   culpa:{n:"Culpa",k:["culpa","pecad","arrepent","vergüenza","verguenza","fallé","falle","error","perdón","perdon"],
     v:[["Si confesamos nuestros pecados, él es fiel y justo para que nos perdone nuestros pecados, y nos limpie de toda maldad.","1 Juan 1:9"],
        ["Ahora pues, ninguna condenación hay para los que están en Cristo Jesús.","Romanos 8:1"],
        ["Cuanto está lejos el oriente del occidente, hizo alejar de nosotros nuestras rebeliones.","Salmos 103:12"]],
-    r:"La culpa sana te lleva a reconocer y reparar. La culpa que te aplasta una y otra vez no viene de Dios: cuando confiesas, Él perdona de verdad. Lo que sigue es aceptar ese perdón.",
+    dc:["Te compadeces de todos, porque todo lo puedes, y pasas por alto los pecados de los hombres para que se arrepientan. Amas todo lo que existe.","Sabiduría 11:23-24"],
+    t:'Católicos y ortodoxos pueden acudir al sacramento de la confesión o reconciliación. En las iglesias evangélicas la confesión se hace directamente a Dios y, si ayuda, también ante un pastor o hermano de confianza (Santiago 5:16).',
+    r:"Equivocarse duele, y que te duela habla bien de ti. Pero hay una diferencia: la culpa que te lleva a pedir perdón y reparar te ayuda a crecer; la que te hace repasar lo mismo una y otra vez solo te hunde. Cuando le entregas a Dios lo que hiciste, Él perdona de verdad. Lo que sigue es lo más difícil: creerle y perdonarte tú también.",
     p:"Confiesa a Dios con palabras concretas lo que hiciste. Si dañaste a alguien, piensa en un paso para pedir perdón o reparar. Luego, deja de repasarlo.",
     o:"Dios mío, reconozco mi falta. Gracias porque tu perdón es más grande que mi error. Ayúdame a reparar lo que pueda y a caminar libre. Amén."},
   miedo:{n:"Miedo",k:["miedo","temor","asust","pánico","panico","terror"],
     v:[["En el día que temo, yo en ti confío.","Salmos 56:3"],
-       ["Mira que te mando que te esfuerces y seas valiente: no temas ni desmayes, porque Jehová tu Dios será contigo en donde quiera que fueres.","Josué 1:9"],
+       ["Mira que te mando que te esfuerces y seas valiente: no temas ni desmayes, porque el Señor tu Dios será contigo en donde quiera que fueres.","Josué 1:9"],
        ["Porque no nos ha dado Dios el espíritu de temor, sino el de fortaleza, y de amor, y de templanza.","2 Timoteo 1:7"]],
-    r:"El salmista no dice \"nunca temo\", sino \"cuando temo, confío\". La valentía bíblica es avanzar con miedo, sabiendo que Dios va contigo.",
+    dc:["El que teme al Señor no se acobarda ni tiene miedo de nada, porque el Señor es su esperanza.","Eclesiástico (Sirácida) 34:14"],
+    r:"Tener miedo no te hace menos creyente. Fíjate en el salmista: no dice «nunca tengo miedo», dice «cuando tengo miedo, confío en ti». La valentía no es dejar de temblar; es dar el paso aunque tiembles, sabiendo que no vas solo/a.",
     p:"Nombra exactamente a qué le temes. Luego elige el paso más pequeño que puedas dar hoy frente a eso, y repite el Salmo 56:3 antes de darlo.",
     o:"Señor, tengo miedo. Toma mi mano y dame valor para el siguiente paso. Confío en que vas delante de mí. Amén."},
   enojo:{n:"Enojo",k:["enoj","rabia","ira","molest","furia","indign"],
     v:[["Airaos, y no pequéis; no se ponga el sol sobre vuestro enojo.","Efesios 4:26"],
        ["Todo hombre sea pronto para oír, tardío para hablar, tardío para airarse: porque la ira del hombre no obra la justicia de Dios.","Santiago 1:19-20"],
        ["La blanda respuesta quita la ira: mas la palabra áspera hace subir el furor.","Proverbios 15:1"]],
-    r:"Enojarse no es pecado; lo que hacemos con el enojo puede serlo. Dios te pide no actuar en caliente y no guardarlo hasta que se vuelva rencor.",
+    dc:["Perdona a tu prójimo el agravio, y así, cuando ores, te serán perdonados tus pecados.","Eclesiástico (Sirácida) 28:2"],
+    r:"Sentir rabia es humano; hasta Jesús se enojó al ver injusticias. El problema no es lo que sientes, sino lo que haces con eso. Respira antes de responder. Y no lo guardes por meses: el enojo que se queda adentro termina en rencor, y el rencor te hace más daño a ti que a la otra persona.",
     p:"Antes de responder a quien te molestó, espera al menos una hora. Escribe lo que sientes y preséntaselo a Dios. Después decide con calma qué decir.",
     o:"Padre, estoy enojado/a. Pongo esta emoción delante de ti. Guarda mi boca y dame sabiduría para responder con justicia y sin herir. Amén."},
   decision:{n:"Una decisión difícil",k:["decid","decisión","decision","elegir","no sé qué hacer","no se que hacer","camino","trabajo nuevo","mudar"],
-    v:[["Fíate de Jehová de todo tu corazón, y no estribes en tu prudencia. Reconócelo en todos tus caminos, y él enderezará tus veredas.","Proverbios 3:5-6"],
+    v:[["Fíate del Señor de todo tu corazón, y no estribes en tu prudencia. Reconócelo en todos tus caminos, y él enderezará tus veredas.","Proverbios 3:5-6"],
        ["Y si alguno de vosotros tiene falta de sabiduría, demándela a Dios, el cual da a todos abundantemente, y no zahiere; y le será dada.","Santiago 1:5"],
        ["Te haré entender, y te enseñaré el camino en que debes andar: sobre ti fijaré mis ojos.","Salmos 32:8"]],
-    r:"Dios promete sabiduría a quien se la pide. Esa sabiduría suele llegar por varias vías juntas: la oración, la Palabra, el consejo de personas sabias y la paz interior frente a una opción.",
+    dc:["Y sobre todo, suplica al Altísimo que dirija tu camino en la verdad.","Eclesiástico (Sirácida) 37:15"],
+    r:"No saber qué hacer da vértigo, sobre todo cuando lo que está en juego importa. Dios promete darte sabiduría si se la pides, y esa sabiduría suele llegar de a poco y por varios caminos: la oración, su Palabra, el consejo de alguien que te quiere bien y esa paz interior que aparece frente a la opción correcta. No tienes que decidirlo todo hoy.",
     p:"Escribe tus opciones con sus pros y contras. Ora por ellas durante unos días y consulta a una persona madura en la fe antes de decidir.",
     o:"Señor, necesito sabiduría. Muéstrame tu camino y dame paz con la decisión correcta. Que se haga tu voluntad antes que la mía. Amén."},
   enfermedad:{n:"Enfermedad",k:["enferm","diagnóst","diagnost","hospital","dolor","operaci","salud","cáncer","cancer"],
-    v:[["Jehová lo sustentará sobre el lecho del dolor: mullirás toda su cama en su enfermedad.","Salmos 41:3"],
+    v:[["El Señor lo sustentará sobre el lecho del dolor: mullirás toda su cama en su enfermedad.","Salmos 41:3"],
        ["Bástate mi gracia; porque mi potencia en la flaqueza se perfecciona.","2 Corintios 12:9"],
        ["Él da esfuerzo al cansado, y multiplica las fuerzas al que no tiene ningunas.","Isaías 40:29"]],
-    r:"La enfermedad nos enfrenta a nuestra fragilidad. Dios no siempre quita la prueba, pero promete sostenerte dentro de ella y darte fuerza para cada día.",
+    dc:["Hijo, en tu enfermedad no te descuides: ruega al Señor y él te sanará. Y da también lugar al médico, porque el Señor lo creó.","Eclesiástico (Sirácida) 38:9.12"],
+    t:'Católicos y ortodoxos pueden pedir la unción de los enfermos. En muchas iglesias evangélicas los pastores o ancianos oran por el enfermo y lo ungen con aceite, siguiendo Santiago 5:14.',
+    r:"Enfermarse, o ver enfermo a alguien que amas, nos recuerda lo frágiles que somos. Está bien tener miedo y está bien preguntarle a Dios por qué. Él no siempre quita la prueba, pero promete no soltarte en medio de ella y darte la fuerza justa para cada día. Cuidarte y seguir el tratamiento también es una forma de fe.",
     p:"Sigue las indicaciones de tu equipo médico: cuidar tu cuerpo también honra a Dios. Pide a tu comunidad que ore contigo y acepta la ayuda que te ofrezcan.",
     o:"Señor, pongo en tus manos mi salud (o la de mi ser querido). Da sabiduría a los médicos, fuerza a mi cuerpo y paz a mi corazón. Amén."},
   dinero:{n:"Problemas económicos",k:["deuda","dinero","plata","cuentas","pagar","cesant","despid","sin trabajo","económ","econom","sueldo"],
     v:[["Mi Dios pues suplirá todo lo que os falta conforme a sus riquezas en gloria en Cristo Jesús.","Filipenses 4:19"],
        ["Mirad las aves del cielo, que no siembran, ni siegan, ni allegan en alfolíes; y vuestro Padre celestial las alimenta. ¿No sois vosotros mucho mejores que ellas?","Mateo 6:26"],
        ["Mozo fui, y he envejecido, y no he visto justo desamparado, ni su simiente que mendigue pan.","Salmos 37:25"]],
-    r:"La escasez pesa en el cuerpo y en la familia. Dios promete suplir lo necesario, y a la vez te llama a administrar con orden lo que tienes y a pedir ayuda sin vergüenza.",
+    dc:["Mirad las generaciones antiguas y ved: ¿quién confió en el Señor y quedó defraudado?","Eclesiástico (Sirácida) 2:10"],
+    r:"Las deudas y la falta de plata pesan en el cuerpo, en el sueño y en la familia. No es algo de lo que tengas que avergonzarte. Dios conoce lo que necesitas y promete no dejarte desamparado/a; al mismo tiempo, te invita a ordenar lo que tienes y a pedir ayuda. Pedir ayuda también es confiar.",
     p:"Haz hoy una lista simple: lo que entra, lo que sale y lo que debes. Elige un gasto que puedas reducir y una persona o institución a la que puedas pedir orientación.",
     o:"Padre, tú conoces mis necesidades. Provee para mí y los míos, dame sabiduría para administrar y abre puertas de trabajo. Confío en ti. Amén."},
   familia:{n:"Conflicto familiar",k:["famil","pareja","esposo","esposa","marido","hijo","hija","mamá","mama","papá","papa","pelea","discusi","separ","divorc"],
     v:[["Soportándoos los unos a los otros, y perdonándoos los unos a los otros si alguno tuviere queja del otro: de la manera que Cristo os perdonó, así también hacedlo vosotros.","Colosenses 3:13"],
        ["Si se puede hacer, cuanto está en vosotros, tened paz con todos los hombres.","Romanos 12:18"],
        ["Y sobre todo, tened entre vosotros ferviente caridad; porque la caridad cubrirá multitud de pecados.","1 Pedro 4:8"]],
-    r:"Romanos dice \"cuanto está en vosotros\": no controlas la reacción del otro, solo tu parte. Buscar la paz no significa aceptar el maltrato; significa hacer lo que te corresponde con amor y verdad.",
+    dc:["Hijo, cuida de tu padre en su vejez y no le des tristeza mientras viva.","Eclesiástico (Sirácida) 3:12"],
+    r:"Los conflictos en la familia duelen más porque vienen de quienes más queremos. La Biblia dice «en cuanto dependa de ti»: no puedes controlar cómo reacciona el otro, solo tu parte. Buscar la paz no significa aguantar maltratos ni callar lo que duele; significa hacer lo que te toca con amor y con verdad.",
     p:"Piensa en un gesto concreto de reconciliación que dependa solo de ti. Si en tu hogar hay violencia, prioriza tu seguridad y busca ayuda profesional.",
     o:"Señor, sana mi familia. Dame humildad para reconocer mi parte, paciencia para escuchar y valor para perdonar. Amén."},
   dudas:{n:"Dudas de fe",k:["duda","no creo","fe débil","fe debil","lejos de dios","no siento a dios","alejad"],
     v:[["Creo, ayuda mi incredulidad.","Marcos 9:24"],
        ["Es pues la fe la sustancia de las cosas que se esperan, la demostración de las cosas que no se ven.","Hebreos 11:1"],
        ["Y me buscaréis y hallaréis, porque me buscaréis de todo vuestro corazón.","Jeremías 29:13"]],
-    r:"Ese padre le dijo a Jesús \"creo\" y \"ayúdame a creer\" en la misma frase, y Jesús lo atendió. Las dudas honestas no te descalifican; pueden ser el comienzo de una fe más profunda.",
+    dc:["Buscad al Señor con sencillez de corazón, porque se deja encontrar por los que no lo tientan.","Sabiduría 1:1-2"],
+    t:'En todas las tradiciones cristianas se recomienda conversar las dudas con un sacerdote, pastor o guía espiritual. Dudar acompañado/a es parte del camino de fe.',
+    r:"Tener dudas no te deja fuera. Un papá desesperado le dijo a Jesús «creo, ayúdame en mi falta de fe», y Jesús no lo rechazó: lo ayudó. Las preguntas honestas no ofenden a Dios. Muchas veces son el comienzo de una fe más profunda y más tuya.",
     p:"Lee esta semana un capítulo diario del Evangelio de Juan. Anota tus preguntas y conversa sobre ellas con alguien en quien confíes.",
     o:"Señor, a veces me cuesta creer. Si estás ahí, déjate encontrar. Ayuda mi poca fe. Amén."},
   cansancio:{n:"Cansancio",k:["cansad","agotad","sin fuerzas","no doy más","no doy mas","quemad","exhaust"],
     v:[["Venid a mí todos los que estáis trabajados y cargados, que yo os haré descansar.","Mateo 11:28"],
-       ["Mas los que esperan a Jehová tendrán nuevas fuerzas; levantarán las alas como águilas, correrán, y no se cansarán, caminarán, y no se fatigarán.","Isaías 40:31"],
+       ["Mas los que esperan al Señor tendrán nuevas fuerzas; levantarán las alas como águilas, correrán, y no se cansarán, caminarán, y no se fatigarán.","Isaías 40:31"],
        ["En lugares de delicados pastos me hará yacer: junto a aguas de reposo me pastoreará. Confortará mi alma.","Salmos 23:2-3"]],
-    r:"El descanso es parte del diseño de Dios: Él mismo instituyó el día de reposo. Detenerte no es flojera; es reconocer que no lo sostienes todo tú.",
+    r:"Si estás agotado/a, no es flojera ni falta de fe: es que has cargado mucho por mucho tiempo. Dios mismo descansó el séptimo día, y Jesús se apartaba a solas para reponerse. Detenerte un rato es reconocer que no tienes que sostenerlo todo tú. Él no te pide más fuerza; te invita a descansar en Él.",
     p:"Elige algo que puedas soltar o postergar esta semana. Reserva un rato hoy, aunque sean 20 minutos, sin pantallas, para descansar y orar en silencio.",
     o:"Jesús, vengo a ti cansado/a. Quita de mí lo que no me corresponde cargar y renueva mis fuerzas. Amén."},
   gratitud:{n:"Alegría y gratitud",k:["feliz","alegr","gracias","agradec","bendec","contento","contenta","logré","logre"],
-    v:[["Este es el día que hizo Jehová; nos gozaremos y alegraremos en él.","Salmos 118:24"],
+    v:[["Este es el día que hizo el Señor; nos gozaremos y alegraremos en él.","Salmos 118:24"],
        ["Dad gracias en todo; porque esta es la voluntad de Dios para con vosotros en Cristo Jesús.","1 Tesalonicenses 5:18"],
        ["Toda buena dádiva y todo don perfecto es de lo alto, que desciende del Padre de las luces.","Santiago 1:17"]],
-    r:"Los tiempos buenos también son tiempo de Dios. Agradecer fija en la memoria lo que Él ha hecho, y esa memoria te sostendrá cuando lleguen días difíciles.",
+    dc:["Bendecid a Dios y alabadlo delante de todos los vivientes por los beneficios que os ha hecho.","Tobías 12:6"],
+    r:"¡Qué bueno que estés pasando un buen momento! Los días felices también vienen de Dios y vale la pena detenerse a disfrutarlos. Agradecer te ayuda a guardar en la memoria todo lo bueno que has recibido, y esos recuerdos te van a sostener cuando lleguen días más difíciles.",
     p:"Anota tres cosas concretas por las que estás agradecido/a hoy y comparte una de ellas con alguien.",
     o:"Gracias, Señor, por tu bondad conmigo. Que esta alegría me haga más generoso/a con los demás. Amén."},
   desesperanza:{n:"Sin esperanza",crisis:true,k:["sin esperanza","no quiero vivir","morir","matarme","suicid","hacerme daño","hacerme dano","no tiene sentido","desesper","rendirme"],
-    v:[["Es por la misericordia de Jehová que no somos consumidos, porque nunca decayeron sus misericordias. Nuevas son cada mañana; grande es tu fidelidad.","Lamentaciones 3:22-23"],
+    v:[["Es por la misericordia del Señor que no somos consumidos, porque nunca decayeron sus misericordias. Nuevas son cada mañana; grande es tu fidelidad.","Lamentaciones 3:22-23"],
        ["¿Por qué te abates, oh alma mía, y por qué te conturbas en mí? Espera a Dios; porque aun le tengo de alabar; es él la salud de mi rostro, y el Dios mío.","Salmos 42:11"],
-       ["Cercano está Jehová a los quebrantados de corazón; y salvará a los contritos de espíritu.","Salmos 34:18"]],
-    r:"Muchos hombres y mujeres de la Biblia, como Elías y Jeremías, llegaron a sentir que no podían más. Dios no los reprendió: los cuidó, les dio descanso y puso personas a su lado. Tu vida es valiosa para Él.",
+       ["Cercano está el Señor a los quebrantados de corazón; y salvará a los contritos de espíritu.","Salmos 34:18"]],
+    dc:["El Señor es compasivo y misericordioso, perdona los pecados y salva en el tiempo de la angustia.","Eclesiástico (Sirácida) 2:11"],
+    r:"Si sientes que ya no puedes más, no estás solo/a ni eres la primera persona en sentirse así. Elías le pidió a Dios morir y Jeremías maldijo el día en que nació. Dios no los retó: los cuidó, les dio comida y descanso, y puso personas a su lado. Tu vida vale mucho para Él y para quienes te quieren. Por favor, no cargues con esto en silencio.",
     p:"No pases esto en silencio. Habla hoy con una persona de confianza y con un profesional. Si piensas en hacerte daño, llama ahora a una de las líneas de ayuda que aparecen aquí.",
     o:"Señor, no veo salida. Sostenme hoy, solo hoy. Pon personas en mi camino que me ayuden y renueva mi esperanza. Amén."}
 };
@@ -403,13 +451,15 @@ function render(id){
       <div class="part"><span class="ic">${svg(PIC.ref,2)}</span><h3>Reflexión</h3><p>${d.r}</p></div>
       <div class="part"><span class="ic">${svg(PIC.step,2)}</span><h3>Un paso para hoy</h3><p>${d.p}</p></div>
       <div class="part prayer"><span class="ic">${svg(PIC.pray,2)}</span><h3>Oración</h3><p>${d.o}</p></div>
-    </div>`;
+    </div>
+    ${d.dc?`<div class="dc full"><p class="eyebrow">También en las Biblias católica y ortodoxa</p><blockquote>${esc(d.dc[0])}</blockquote><span class="ref">${d.dc[1]}</span><p class="note">Este libro es parte del Antiguo Testamento en las tradiciones católica y ortodoxa. Las iglesias evangélicas no lo incluyen en su canon.</p></div>`:""}
+    ${d.t?`<div class="trad full"><span class="ic">${svg(PIC.church,1.8)}</span><div><h3>Según tu tradición</h3><p>${d.t}</p></div></div>`:""}`;
   $("#otro").onclick=()=>{idx++;render(id)};
   $("#copiar").onclick=()=>copy(`"${t}" (${ref}, RV1909)`,"Versículo copiado");
 }
 function choose(id,scroll){
   current=id;idx=0;renderChips();render(id);
-  $("#donar").hidden=!!DATA[id].crisis;
+  $("#donar").hidden=$("#acompanamiento").hidden=!!DATA[id].crisis;
   if(scroll) $("#resultado").scrollIntoView({block:"start"});
 }
 function daily(){
@@ -440,7 +490,7 @@ $("#form").addEventListener("submit",e=>{
   if(id){$("#hint").textContent="O elige tu situación:";choose(id,true)}
   else{$("#hint").textContent="No reconocí la situación con esas palabras. Elige la que más se parezca:"}
 });
-$("#hoyBtn").addEventListener("click",()=>{current=null;renderChips();daily();$("#donar").hidden=false});
+$("#hoyBtn").addEventListener("click",()=>{current=null;renderChips();daily();$("#donar").hidden=$("#acompanamiento").hidden=false});
 $("#footStates").innerHTML=["ansiedad","tristeza","familia","dinero","dudas"].map(id=>`<li><a href="#consejo" data-id="${id}">${DATA[id].n}</a></li>`).join("");
 $("#footStates").addEventListener("click",e=>{const a=e.target.closest("a");if(a){e.preventDefault();choose(a.dataset.id,true)}});
 renderChips(); daily();
